@@ -28,7 +28,9 @@ const hamburger = document.querySelector("#hamburgerWrapper");
 hamburger.addEventListener("click", function() {
     count2++;
     if (count2 % 2 == 1) {
-
+        open();
+    } else {
+        close();
     }
 });
 
@@ -41,5 +43,8 @@ function open() {
 }
 
 function close() {
-
+    document.querySelector("#bar1").style.transform = "translateY(0px) rotate(0deg)";
+    document.querySelector("#bar3").style.transform = "translateY(0px) rotate(0deg)";
+    document.querySelector("#bar2").style.opacity = "1";
+    document.querySelector("#sidebar").style.left = "-11%";
 }
